@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz 2</title>
+    <style>
+        body {
+            background-color: #f3fbfd;
+        }
+        div.quiz {
+            overflow: hidden;
+            max-width: 80%;
+            margin: auto;
+        }
+        img.target-view {
+            display: block;
+            margin: 10px 10px;
+            max-width: 100%;
+        }
+        code {
+            background-color: #f7f7f8;
+            border: 1px solid #b4b9bd;
+            border-radius: .25rem;
+            color: #0f2b3d;
+            direction: ltr;
+            display: inline-block;
+            padding: 0 .25rem;
+            unicode-bidi: bidi-override;
+        }
+        #reg {
+            color: blue;
+            font-style: italic;
+        }
+        #color-code {
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f7f7f8;
+            border: 1px solid #b4b9bd;
+            border-radius: .25rem;
+            color: #525c65;
+            display: block;
+            margin: 20px 0;
+            overflow: auto;
+            padding: 1rem;
+            word-wrap: break-word;
+        }
+
+        pre code {
+            border: none;
+            padding: 0;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+<div class="quiz">
+<h1>Quiz 2 </h1>
+<h2> Style Your Favorite Pet </h2>
+<p> For this quiz, I want you to download an image of your favorite pet of size <code> 400x300 </code> and add some style to it.</p>
+Paste your image in the images folder, write HTML code in index.html and write CSS in the style.css under css folder.
+But, you won't be adding just any style.
+Instead, you will need to use properties for <code> max-width </code>, <code> margin </code>, <code> border </code>, <code> border-radius </code> ,<code> cursor </code>,
+and <code> box-shadow </code> to produce the result given below.
+
+<img class="target-view" src="images/TargetView.jpg">
+    <p>
+        <em> Use color of the border <span id="color-code">#fa<span id="reg">&lt;last four digits of your registration number&gt; </span></span></em>
+    </p>
+    <h3 id="border">Border</h3>
+    <p>If you've ever used a table in a word processor or spreedsheet,
+        then you should be familiar with borders. With CSS, you can add a border to just about anything.
+        There are a ton of different options for customizing borders like style, width, and color!
+        Click <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" title="CSS Borders">here</a>
+        to learn more.</p>
+    <h3 id="cursor">Cursor</h3>
+    <p>It's possible you've never noticed your cursor change when viewing a website because it's so subtle.
+        But, changing the cursor can be extremely helpful when trying to communicate things to the user.
+        For example, if a user hovers over a link, changing the cursor to a pointer let's the user know the
+        link can be clicked.</p>
+    <p><img src="images/cursor-styles.jpg" alt="cursor example"></p>
+    <p><em>A normal button on the left, and the same button while a mouse is hovering over it on the right</em></p>
+    <p>For most situations your browser automatically changes the cursor, but you can use the cursor property to override its behavior.
+        See <a target="_blank" href="https://css-tricks.com/almanac/properties/c/cursor/" title="Cursors Demo">
+            this demo</a> of all the different cursors in action! Obvisouly,
+        this property only applies to users with a mouse .</p>
+    <h3 id="box-shadow">Box-Shadow</h3>
+    <p><em>Use shadows to add a sense of depth to images</em></p>
+    <p>The box-shadow property is relatively new to the world of CSS. You can use it to add a shadow to an element.
+        If you want to try experimenting with box-shadows,
+        check out this <a target="_blank" href="http://www.cssmatic.com/box-shadow"
+                          title="Box-Shadow Generator">box-shadow generator</a> from CSSmatic.</p>
+    <h3 id="fa">Icon </h3>
+    <p><em>Icons play a vital role in web design</em></p>
+    <p>The number of icons we see on daily basis is amazing. They are everywhere around us, both online and offline.
+        We love to use them. They enhance the aesthetic of our sites and can provide a better user experience.
+        Icons can put content in a nutshell, can draw attention and can increase readability.
+        Use the pet icon below the pet image as shown in image.
+        Search out icon from <a target="_blank" href="https://fontawesome.com/icons?d=gallery&m=free"
+                          title="Icons Gallery">gallery</a>  of font-awesome.</p>
+    <h3 id="how-to-complete-this-quiz">How to Complete this Quiz</h3>
+    <p>Edit <code>index.html</code>, <code>style.css</code> within class time to replicate the same styling seen in the image above.</p>
+    <p>I've already written the <strong>selector</strong> portion of the code, you just need to fill in the styles.</p>
+    <pre><code><span>#main</span> <span>{
+        <span>/* add CSS here */</span>
+}</span>
+
+</code><br><code><span>.pet</span> <span>{
+        <span>/* add CSS here */</span>
+}</span>
+</code></pre>
+    <p>Try your best to complete the exercise and take screen-shot of your achieved view and paste it in images folder.
+        Push your code and image on your forked repository on github.</p>
+</div>
+
+</body>
+</html>
