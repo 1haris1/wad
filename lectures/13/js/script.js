@@ -5,7 +5,7 @@ var questions = [{
         "A central machine deep within Netscape's corporate offices",
         "None of the above"],
     correctAnswer : 0
-},{
+}, {
     question : "Which of the following can't be done with client-side JavaScript?",
     choices : [ "Validating a form",
         "Sending a form's contents by email",
@@ -26,12 +26,46 @@ var correctAnswers = 0;
 var quizOver = false;
 displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
-function displayNext() {
-    /*Write your code here */
+function displayNext()
+{
+    if(currentQuestion + 1 < questions.length)
+    {
+        var ans = document.querySelector("input [type = radio]: checked");
+        if (ans = null) {
+            var msg = document.getElementById("quiz-message");
+            msg.style.color = 'red';
+            msg.style.display = "block";
+            msg.innerText = "Option was not Selected";
+        }
+        else {
+            var i;
+            for (i = 0; i < questions[currentQuestion].choices.length; i++) {
+                if (document.getElementById("i").checked) {
+                    break;
+                }
+            }
+            if (i === questions[currentQuestion].correctAnswer) {
+                correctAnswers++;
+            }
+            currentQuestion++;
+            displayCurrentQuestion();
+        }
+    }
+   else
+    {
+        displayScore();
+        quizOver = true;
+    }
 }
 
 function displayCurrentQuestion() {
-    /*Write your code here */
+
+    for (var i=0; i < questions[currentQuestion].choices.length; i++)
+    {
+        document.getElementById("choice-list").innerHTML += '<li><input type = "radio" id = "i" name = "answers" value=i>'
+            + questions[currentQuestion].choices[i] + '</li>';
+    }
+    document.getElementById("question").innerHTML = questions[currentQuestion].question;
 }
 
 function resetQuiz() {
