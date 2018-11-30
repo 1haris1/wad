@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation</title>
+</head>
+<body>
+
+<h2>What are CSS Animations?</h2>
+<p>An animation lets an element gradually change from one style to another.</p>
+<p>You can change as many CSS properties you want, as many times you want.</p>
+<p>To use CSS animation, you must first specify some keyframes for the
+    animation.</p>
+<p>Keyframes hold what styles the element will have at certain times.</p>
+<hr>
+
+<h2>The @keyframes Rule</h2>
+<p>When you specify CSS styles inside the <code>@keyframes</code>
+    rule, the animation will gradually change from the current style to the new style
+    at certain times.</p>
+<p>To get an animation to work, you must bind the animation to an element.</p>
+<p>The following example binds the &quot;example&quot; animation to the &lt;div&gt; element.
+    The animation will last for 4 seconds, and it will gradually change the
+    background-color of the &lt;div&gt; element from &quot;red&quot; to &quot;yellow&quot;:</p>
+<style>
+    div.e1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: animation1;
+        animation-duration: 4s;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes animation1 {
+        from {background-color: red;}
+        to {background-color: yellow;}
+    }
+
+    /* Standard syntax */
+    @keyframes animation1 {
+        from {background-color: red;}
+        to {background-color: yellow;}
+    }
+</style>
+<div class="e1"></div>
+<p><b>Note:</b> The <code>animation-duration</code> property
+    defines how long time an animation should take to complete. If the <code>animation-duration</code> property is not specified,
+    no animation will occur, because
+    the default value is 0s (0 seconds).&nbsp;</p>
+<p>In the example above we have specified when the style will change by using
+    the keywords &quot;from&quot; and &quot;to&quot; (which represents 0% (start) and 100% (complete)).</p>
+<p>It is also possible to use percent. By using percent, you can add as many
+    style changes as you like.</p>
+<p>The following example will change the background-color of the &lt;div&gt;
+    element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+<style>
+    div.e2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: animation2;
+        animation-duration: 4s;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes animation2 {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+    }
+
+    /* Standard syntax */
+    @keyframes animation2 {
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}
+    }
+</style>
+<div class="e2"></div>
+<p>The following example will change both the background-color and the position of the &lt;div&gt;
+    element when the animation is 25% complete, 50% complete, and again when the animation is 100% complete:</p>
+<style>
+    div.e3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        -webkit-animation-name: animation3; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+        animation-name: animation3;
+        animation-duration: 10s;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes animation3 {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+
+    /* Standard syntax */
+    @keyframes animation3 {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+</style>
+<div class="e3"></div>
+<hr>
+
+
+<h2>Delay an Animation</h2>
+<p>The <code>animation-delay</code> property specifies a delay for the start of an animation.</p>
+<p>The following example has a 2 seconds delay before starting the animation:</p>
+
+
+<p>Negative values are also allowed. If using negative values, the animation
+    will start as if it had already been playing for <em>N</em> seconds.</p>
+<hr>
+
+<h2>Set How Many Times an Animation Should Run</h2>
+<p>The <code>animation-iteration-count</code> property specifies the number of times an animation should run.</p>
+<p>The value &quot;infinite&quot; to make the animation
+    continue for ever</p>
+<hr>
+
+<h2>Run Animation in Reverse Direction or Alternate Cycles</h2>
+<p>The <code>animation-direction</code> property specifies
+    whether an animation should be played forwards, backwards or in alternate
+    cycles.</p>
+<p>The animation-direction property can have the following values:</p>
+<ul>
+    <li><code>normal</code> - The animation is played as normal
+        (forwards). This is default</li>
+    <li><code>reverse</code> - The animation is played in
+        reverse direction (backwards)</li>
+    <li><code>alternate </code>- The animation is played
+        forwards first, then backwards</li>
+    <li><code>alternate-reverse</code> - The animation is played
+        backwards first, then forwards</li>
+</ul>
+<hr>
+
+<h2>Specify the Speed Curve of the Animation</h2>
+<p>The <code>animation-timing-function</code> property specifies the speed curve of the
+    animation.</p>
+<p>The animation-timing-function property can have the following values:</p>
+<ul>
+    <li><code>ease</code> - Specifies an animation with a slow start, then fast, then end slowly (this is default)</li>
+    <li><code>linear</code> - Specifies an animation with the same speed from start to end</li>
+    <li><code>ease-in</code> - Specifies an animation with a slow start</li>
+    <li><code>ease-out</code> - Specifies an animation with a slow end</li>
+    <li><code>ease-in-out</code> - Specifies an animation with a slow start and end</li>
+</ul>
+<hr>
+
+
+
+<h2>Animation Shorthand Property</h2>
+<style>
+    div.e4 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
+        animation: myfirst 5s linear 2s infinite alternate;
+    }
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes myfirst {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+
+    /* Standard syntax */
+    @keyframes myfirst {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:200px; top:0px;}
+        50%  {background-color:blue; left:200px; top:200px;}
+        75%  {background-color:green; left:0px; top:200px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+</style>
+
+<div class="e4"></div>
+
+
+
+</body>
+</html>

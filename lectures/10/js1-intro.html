@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS1</title>
+
+</head>
+<body>
+<h1>JavaScript</h1>
+<h2>Why Study JavaScript?</h2>
+<p>JavaScript is one of the <strong>3 languages</strong> all web developers <strong>
+    must</strong>
+    learn:</p>
+<p>&nbsp;&nbsp; 1. <strong>HTML</strong> to define the content of web pages</p>
+<p>&nbsp;&nbsp; 2. <strong>CSS</strong> to specify the layout of web pages</p>
+<p>&nbsp;&nbsp; 3. <strong>JavaScript</strong> to program the behavior of web pages </p>
+<p>Web pages are not the only place where JavaScript is used.
+    Many desktop and server programs use JavaScript. Node.js is the best known.
+    Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language.</p>
+
+
+<h2>JavaScript Can Change HTML Content</h2>
+<p>One of many JavaScript HTML methods is <strong>getElementById()</strong>.</p>
+<p>This is method to "find" an HTML element (with id)
+    and changes the element content (<strong>innerHTML</strong>) :</p>
+<p id="text"></p>
+<p id="calc"></p>
+<p id="example1"></p>
+<script>
+    /*
+        document.getElementById("text").innerText = "This is a sample text";
+    */
+/*
+        document.getElementById("calc").innerText = 5 + 5;
+*/
+    /*
+        document.getElementById("example1").innerText = 'Example text using Single Quote';
+    */
+</script>
+<!--
+<script src="js/main.js"></script>
+-->
+
+
+
+<h2>JavaScript can change HTML attribute values.</h2>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<!--
+<button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">Turn on the light</button>
+-->
+
+<img id="myImage" src="images/pic_bulboff.gif" style="width:100px">
+
+<!--
+<button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">Turn off the light</button>
+-->
+
+
+<h2>JavaScript Can Change HTML Styles (CSS)</h2>
+<p>Changing the style of an HTML element, is a variant of changing an HTML
+    attribute:</p>
+<p id="alter_size">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('alter_size').style.fontSize='35px'">Click Me!</button>
+
+
+<h2>JavaScript Can Hide HTML Elements</h2>
+<p id="change_display">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('change_display').style.display='none'">Click Me!</button>
+
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="show_it" style="display:none;">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('show_it').style.display='block'">Click Me!</button>
+</body>
+</html>

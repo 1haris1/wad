@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops in JS</title>
+</head>
+<body>
+<p id="test"></p>
+<p id="text2"></p>
+<script>
+    // Create an object:
+    var person = {
+        firstName: "Ali",
+        lastName : "Raza",
+        id       : 12,
+        fullName : function() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    document.getElementById("test").innerHTML = person.fullName();
+
+    var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    var text = "";
+    var i;
+    for (i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+    }
+    //document.getElementById("text2").innerHTML = text;
+
+</script>
+</body>
+</html>

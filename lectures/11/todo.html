@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+        <h2 class="text-center my-5">Todo List </h2>
+        <div class="row">
+            <div class="col-sm-2 col-md-2 offset-md-1 d-none d-sm-block">
+                <label for="task" class="text-right font-weight-bold">Task</label>
+            </div>
+            <div class="col-9 col-sm-8 col-md-6">
+                <input id="task" class="form-control">
+            </div>
+            <div class="col-3 col-sm-2 col-md-3 text-center">
+                <button id="add" class="btn btn-info" onclick="add()">
+                    <i class="fa fa-plus"></i>
+                    <span class="d-none d-sm-inline">Add</span>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3 my-2" id="message" style="display: none;">
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> There is no task in the field
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div id="todos" class="col-12">
+
+            </div>
+        </div>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

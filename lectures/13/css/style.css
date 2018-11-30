@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
+.quiz-wrapper {
+    position: relative;
+    width: 75%;
+    margin: auto;
+    background-color: lightskyblue;
+    top: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 2em;
+    color: #563e11;
+}
+input[type=radio]{
+    height: 2em;
+    width: 20px;
+    border: 0;
+}
+
+#next-btn {
+    text-align: center;
+    background-color: #805724;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#question {
+    text-align: center;
+    font-size: 2em;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    background-color: #805724;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+}
+
+
+#quiz-message {
+    color: red;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px;
+}
+
+#result {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px;
+}
