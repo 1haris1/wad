@@ -1,0 +1,59 @@
+#header-wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+.actions {
+    color: #f3543a;
+}
+.TitleH1 {
+    display: block;
+    margin-bottom: 25px;
+    background: #f3543a;
+    margin-left: 0;
+    color: #FFF;
+    font-family: "Bliss2Bold",Arial,Helvetica,sans-serif;
+    font-size: 30px;
+    padding: 5px;
+}
+.TitleH2 {
+    display: block;
+    margin-bottom: 25px;
+    background: #f39c12;
+    margin-left: 0;
+    color: #FFF;
+    font-family: "Bliss2Bold",Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.sav-acct-info {
+    float: left;
+    border-bottom: 1px solid #d9d8d8;
+    width: 100%;
+    clear: both;
+    padding-bottom: 9px;
+    height: auto !important;
+}
+
+
+.acct-head {
+    font-family: "Trebuchet MS";
+    font-size: 16px;
+    color: #404040;
+    font-weight: bold;
+    width: 41% !important;
+    float: left;
+    padding-bottom: 5px;
+}
+
+.acct-desc {
+    font-family: "Trebuchet MS";
+    color: #696a6c;
+    padding-top: 10px !important;
+    width: 49%;
+    float: left;
+    margin-top: -10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 15px;
+}

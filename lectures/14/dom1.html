@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<h1> Document Object Model (DOM) </h1>
+<ul>
+    <li>HTML is received</li>
+    <li>HTML tags are converted to tokens</li>
+    <li>tokens are converted to Nodes</li>
+    <li>Nodes are converted to the DOM</li>
+</ul>
+<p>When you request a website, no matter what backend language is powering that website, it will respond with HTML. The browser receives a stream of HTML. The bytes are run through a complicated (but fully documented) parsing process that determines the different characters (e.g. the start tag character <code>&lt;</code>, an attribute like <code>href</code>, a closing angle bracket like <code>&gt;</code>). After parsing has occurred, a process called <strong>tokenization</strong>. Tokenization takes one character at a time and builds up <strong>tokens</strong>. The tokens are:</p>
+<ul>
+    <li>DOCTYPE</li>
+    <li>start tag</li>
+    <li>end tag</li>
+    <li>comment</li>
+    <li>character</li>
+    <li>end-of-file</li>
+</ul>
+<p>Let's take a break for a second. At this state, the browser has received the bytes that've been sent by a server. The browser has converted the bytes to tags and has read through the tags to create a list of tokens.</p>
+<p>This list of tokens then goes through the tree construction stage. The output of this stage is a tree-like structure - this is the DOM!</p>
+ <fieldset>
+        <p>a tree structure that captures the content and properties of the HTML and all the relationships between the nodes</p>
+    </fieldset>
+    <fieldset>
+        <p>the DOM is the full, parsed representation of the HTML</p>
+    </fieldset>
+<p>Try this:</p>
+<ol>
+    <li>open the console on this page</li>
+    <li>type out the word <code>document</code><ul>
+        <li>careful not to declare it (<code>const document</code>)</li>
+        <li>careful not to wrap it in quotes (<code>"document"</code>)</li>
+    </ul>
+    </li>
+    <li>press enter</li>
+</ol>
+
+</body>
+</html>
