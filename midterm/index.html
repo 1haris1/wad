@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="profile align-center">
+        <a class="profile-img">
+            <img id="dp">
+        </a>
+        <h1 id="name"></h1>
+        <p id="dob"></p>
+        <p id="position"></p>
+    </div>
+    <div class="content">
+        <div class="comment-header align-center">
+            <textarea id="comment-area" placeholder="What's on your mind about this personality?"></textarea>
+            <button id="share-btn" onclick="postComment()">Share</button>
+        </div>
+        <span id="comment-msg"></span>
+        <div id="comment-list"></div>
+        <button id="next-btn" class="nav-btn" onclick="switchProfile(1)">&gt;</button>
+        <button id="pre-btn" class="nav-btn" onclick="switchProfile(-1)">&lt;</button>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
