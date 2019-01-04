@@ -1,5 +1,22 @@
 <?php
 require_once "db_connection.php";
+
+if(isset($_POST['insert_pro'])) {
+    $title = $_POST['pro_title'];
+    $cat = $_POST['pro_cat'];
+    $brand = $_POST['pro_brand'];
+    $price = $_POST['pro_price'];
+    $desc = $_POST['pro_desc'];
+    $keywords = $_POST['pro_kw'];
+
+    $q = "insert into products (pro_title,pro_cat,pro_brand,pro_price,pro_desc,pro_kw) value ('$title','$cat','$brand'
+        ,'$price','$desc','$keywords')";
+
+    $r = mysqli_query($con,$q);
+    if(!$r) {
+        echo "Not Exe";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +36,7 @@ require_once "db_connection.php";
 <body>
 <div class="container">
     <h1 class="text-center my-4"><i class="fas fa-plus fa-md"></i> <span class="d-none d-sm-inline"> Add New </span> Product </h1>
-    <form>
+    <form action="insert_product.php" method="post">
         <div class="row">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="pro_title" class="float-md-right"> <span class="d-sm-none d-md-inline"> Product </span> Title:</label>
@@ -42,11 +59,16 @@ require_once "db_connection.php";
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
                         <option>Select Category</option>
-                        <option>Mobile</option>
-                        <option>Laptop</option>
-                        <option>Tablet</option>
-                        <option>Watch</option>
-                        <option>Camera</option>
+                        <?php
+                        global $con;
+                        $getCatsQuery = "select * from categories";
+                        $getCatsResult = mysqli_query($con,$getCatsQuery);
+                        while($row = mysqli_fetch_assoc($getCatsResult)){
+                            $cat_id = $row['cat_id'];
+                            $cat_title = $row['cat_title'];
+                            echo "<option value='$cat_id'>$cat_title</option>>";
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -62,12 +84,16 @@ require_once "db_connection.php";
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
                         <option>Select Brand</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>Oppo</option>
-                        <option>Dell</option>
-                        <option>HP</option>
-                        <option>Sony</option>
+                        <?php
+                        global $con;
+                        $getBrandsQuery = "select * from brands";
+                        $getBrandsResult = mysqli_query($con,$getBrandsQuery);
+                        while($row = mysqli_fetch_assoc($getBrandsResult)){
+                            $brand_id = $row['brand_id'];
+                            $brand_title = $row['brand_title'];
+                            echo "<option value='$brand_id'>$brand_title</option>>";
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -123,7 +149,7 @@ require_once "db_connection.php";
         <div class="row my-3">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
             <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
-                <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
+                <button type="submit" name="insert_pro" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
             </div>
         </div>
     </form>
