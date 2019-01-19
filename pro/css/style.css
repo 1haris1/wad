@@ -221,3 +221,23 @@ a.article:hover {
         display: none;
     }
 }
+
+.product-summary {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-summary:hover {
+    box-shadow: 1px 1px 5px 1px #c18888;
+}
+
+.product-summary img {
+    width: 180px;
+    height: 180px;
+}
+
+input[name='c_name']:invalid {
+    background-color: red;
+}

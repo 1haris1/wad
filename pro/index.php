@@ -18,7 +18,7 @@ require "server/functions.php";
     <div class="row">
         <div class="col-12 no-padding">
             <nav class="navbar navbar-light bg-light navbar-expand-sm fixed-top">
-                <a class="navbar-brand" href="index.html"><img src="media/logo.png" width="175" height="50" alt="logo">
+                <a class="navbar-brand" href="index.php"><img src="media/logo.png" width="175" height="50" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button"
                         data-toggle="collapse"
@@ -33,7 +33,7 @@ require "server/functions.php";
                                        id="search-bar" name="search"
                                        placeholder="Find Mobile Phones, Laptops, and more..">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary btn-lg" type="button"><i class="fas fa-search"></i></button>
+                                    <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -96,9 +96,7 @@ require "server/functions.php";
     <article id="content" class="container-fluid bg-white">
 
         <div class="row">
-            <div class="col">
-                Content
-            </div>
+                <?php getPro(); ?>
         </div>
     </article>
 
