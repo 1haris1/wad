@@ -11,6 +11,18 @@ require "server/functions.php";
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <script>
+        function searchresult(str) {
+                var object = new XMLHttpRequest();
+                 object.onreadystatechange = function() {
+                         document.getElementById("hint").innerHTML = this.responseText;
+                 };
+                 object.open("GET", "search_R.php?e="+str);
+                 object.send();
+
+                 }
+        }
+    </script>
 </head>
 <body>
 
@@ -31,7 +43,11 @@ require "server/functions.php";
                             <div class="input-group">
                                 <input type="search" class="form-control"
                                        id="search-bar" name="search"
-                                       placeholder="Find Mobile Phones, Laptops, and more..">
+                                       placeholder="Find Mobile Phones, Laptops, and more.." onkeyup="searchresult(this.value)">
+                                <span class="text-danger" id="hint"></span>
+
+
+
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
